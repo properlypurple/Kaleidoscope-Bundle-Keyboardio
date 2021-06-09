@@ -423,3 +423,48 @@ gheavy_gergo.build.board=AVR_GHEAVY_GERGO
 gheavy_gergo.build.core=arduino:arduino
 gheavy_gergo.build.variant=gheavy-gergo
 gheavy_gergo.build.extra_flags={build.usb_flags} '-DKALEIDOSCOPE_HARDWARE_H="Kaleidoscope-Hardware-gHeavy-Gergo.h"'
+
+
+##############################################################
+
+atreus62.name= Profet Atreus62
+atreus62.vid.0=0x1209
+atreus62.pid.0=0x2303
+atreus62.vid.1=0x1209
+atreus62.pid.1=0x2302
+
+atreus62.upload.maximum_data_size=2560
+
+## defaults
+atreus62.build.extra_flags={build.usb_flags} '-DKALEIDOSCOPE_HARDWARE_H="Kaleidoscope-Hardware-Profet-Atreus62.h"' -DUSB_CONFIG_POWER=(25)
+atreus62.build.mcu=atmega32u4
+atreus62.build.f_cpu=16000000L
+atreus62.build.vid=0x1209
+atreus62.build.pid=0x2303
+atreus62.build.usb_product="Atreus"
+atreus62.build.usb_manufacturer="Keyboardio"
+atreus62.build.board=AVR_PROFET_ATREUS62
+atreus62.build.core=arduino:arduino
+atreus62.build.variant=keyboardio-atreus
+atreus62.build.flashing_instructions="To update your keyboard's firmware, hold down the key in the lower left corner of your Atreus."
+
+
+atreus62.bootloader.tool=avrdude
+atreus62.bootloader.low_fuses=0xff
+atreus62.bootloader.high_fuses=0xd8
+atreus62.bootloader.extended_fuses=0xcb
+atreus62.bootloader.file=Atreus2/Caterina.hex
+atreus62.bootloader.unlock_bits=0x3F
+atreus62.bootloader.lock_bits=0x2F
+atreus62.bootloader.pid=0x2302
+
+
+atreus62.upload.tool=avrdude
+atreus62.upload.protocol=avr109
+atreus62.upload.maximum_size=28672
+atreus62.upload.maximum_data_size=2560
+atreus62.upload.speed=57600
+atreus62.upload.disable_flushing=true
+atreus62.upload.use_1200bps_touch=true
+atreus62.upload.wait_for_upload_port=true
+
